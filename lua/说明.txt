@@ -1,0 +1,63 @@
+player
+
+init£º
+
+
+update£º
+
+update posotion according to direction
+
+
+draw£º
+
+draw the player in the self.position
+
+walk:
+isPushing = false
+speed = 100
+
+push(obj, direction, dt):
+isPushing = ture
+if obj.type = wall
+  self.speed = 0
+else if obj.type = box
+  local obj1 = checkObstruction(obj, obj.radius, direction)
+  if obj1 == nil
+    self.speed = 50
+    player:update(dt)
+    obj.move(direction, self.speed * dt)
+  else 
+    speed = 0
+
+
+box
+
+init;
+
+update:
+
+draw:
+
+
+
+main
+
+keypressed:
+
+change the direction of player
+
+update(dt):
+
+
+local obj = checkObstruction(player, player.radius, player.direction)
+if obj
+  player.push(obj.type, player.direction, dt)
+else
+  player.walk(dt)
+  --player.update(dt)
+
+
+
+
+
+
