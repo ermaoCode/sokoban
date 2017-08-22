@@ -2,8 +2,6 @@
 
 ## LUA
 
-test
-
 安装[LÖVE](!http://love2d.org/)
 
 将整个LUA文件夹拖动到 LÖVE 根目录下的 love.exe 上即可运行。
